@@ -18,6 +18,9 @@ public class Body {
         this.orbits = orbits;
     }
     public String toString(){
-        return "Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits.name + " " + "Mean distance from what it orbits: " + meandistance);
+        if(orbits == null)
+            return "Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + "NaN" + " " + "Mean distance from what it orbits: " + meandistance;
+        else
+            return "Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits.name + " " + "Mean distance from what it orbits: " + meandistance;
     }
 }
