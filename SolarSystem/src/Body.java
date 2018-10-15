@@ -5,18 +5,18 @@ public class Body {
     private double diameter;
     private Body orbits;
     private double meandistance;
-    public Body(String name, double mass, double diameter, Body orbits, double meandistance) {
+    public Body(String name, double mass, double diameter, double meandistance) {
         this.name = name;
         this.mass = mass;
         this.diameter = diameter;
-        this.orbits = orbits;
+        this.orbits = null;
         this.meandistance = meandistance;
     }
     public void getData(){
         System.out.println("Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits + " " + "Mean distance from what it orbits: " + meandistance);
     }
     public String toString(){
-        
+
         return "";
     }
 }
