@@ -15,4 +15,8 @@ public class Body {
     public void getData(){
         System.out.println("Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits + " " + "Mean distance from what it orbits: " + meandistance);
     }
+    public String toString(){
+        
+        return "";
+    }
 }
