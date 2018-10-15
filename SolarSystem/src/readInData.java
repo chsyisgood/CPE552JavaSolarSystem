@@ -33,12 +33,12 @@ public class readInData {
             Body body = new Body(name,data[0],data[1],data[2],data[3]);
             List.add(body);
             findOrbits(body,orbits);
-            System.out.println(body);
             c.nextLine();
         }while(c.hasNextLine());
     }
     public static void main(String[] args)throws NoSuchFieldException, IOException {
         List = new ArrayList<Body>();
         readInData a = new readInData();
+        System.out.println(List);
     }
 }
