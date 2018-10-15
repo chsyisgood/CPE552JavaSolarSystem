@@ -1,4 +1,3 @@
-
 public class Body {
     private String name;
     private double mass;
@@ -14,6 +13,12 @@ public class Body {
     }
     public void getData(){
         System.out.println("Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits + " " + "Mean distance from what it orbits: " + meandistance);
+    }
+    public boolean isOrbits(String s){
+        return s.equals(name);
+    }
+    public void setOrbits(Body orbits){
+        this.orbits = orbits;
     }
     public String toString(){
 

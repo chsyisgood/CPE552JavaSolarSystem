@@ -9,7 +9,7 @@ public class readInData {
         List = new ArrayList<Body>();
         File file = new File(fileName);
         Scanner c = new Scanner(new BufferedReader(new FileReader(file)));
-        String name , orbits;
+        String name,orbits;
         // double mass, diameter, Perihelion, Aphelion;
         double[] data;
         c.nextLine();
