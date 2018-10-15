@@ -12,7 +12,7 @@ public class Body {
         this.orbits = orbits;
         this.meandistance = meandistance;
     }
-    public getData(){
+    public void getData(){
         System.out.println("Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits + " " + "Mean distance from what it orbits: " + meandistance);
     }
 }
