@@ -4,15 +4,12 @@ public class Body {
     private double diameter;
     private Body orbits;
     private double meandistance;
-    public Body(String name, double mass, double diameter, double meandistance) {
+    public Body(String name, double mass, double diameter, double perihelion, double aphelion) {
         this.name = name;
         this.mass = mass;
         this.diameter = diameter;
         this.orbits = null;
-        this.meandistance = meandistance;
-    }
-    public void getData(){
-        System.out.println("Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits + " " + "Mean distance from what it orbits: " + meandistance);
+        this.meandistance = (perihelion + aphelion)/2;
     }
     public boolean isOrbits(String s){
         return s.equals(name);
@@ -21,7 +18,6 @@ public class Body {
         this.orbits = orbits;
     }
     public String toString(){
-
-        return "";
+        return "Name of the body: " + name + " " + "Mass: " + mass + " " + "Diameter: " + diameter + " " + "What it orbits: " + orbits.name + " " + "Mean distance from what it orbits: " + meandistance);
     }
 }
