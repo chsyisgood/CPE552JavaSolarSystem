@@ -5,12 +5,12 @@ public class Body {
     private double diameter;
     private Body orbits;
     private double meandistance;
-    public Body(char nm, double mas, double dia, Body orbit, double distance) {
-        name = nm;
-        mass = mas;
-        diameter = dia;
-        orbits = orbit;
-        meandistance = distance;
+    public Body(char name, double mass, double diameter, Body orbits, double meandistance) {
+        this.name = name;
+        this.mass = mass;
+        this.diameter = diameter;
+        this.orbits = orbits;
+        this.meandistance = meandistance;
     }
     /*public static void main(String[] args) {
         System.out.println("Hello World!");
