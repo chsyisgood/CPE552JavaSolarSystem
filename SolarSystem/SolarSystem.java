@@ -1,20 +1,21 @@
 import java.util.*;
 import java.io.*;
 
-public class readInData {
+public class SolarSystem  {
     final String fileName = "solarsystem.dat";
-    static ArrayList<Body> List;
+    private ArrayList<Body> bodiesList;
 
     public void findOrbits(Body body ,String orbits){
         // find and set the orbits
-        int size = List.size();
+        int size = bodiesList.size();
         if(orbits.equals("NaN"))
             return;
         for(int i = 0; i < size; i++)
-            if(List.get(i).isOrbits(orbits))
-                body.setOrbits(List.get(i));
+            if(bodiesList.get(i).isOrbits(orbits))
+                body.setOrbits(bodiesList.get(i));
     }
-    public readInData()throws NoSuchFieldException, IOException{
+    public SolarSystem ()throws NoSuchFieldException, IOException{
+        bodiesList = new ArrayList<Body>();
         File file = new File(fileName);
         Scanner c = new Scanner(new BufferedReader(new FileReader(file)));
         String name = null,orbits = null;
@@ -31,14 +32,16 @@ public class readInData {
                     data[i - 2] = c.nextDouble();
             }
             Body body = new Body(name,data[0],data[1],data[2],data[3]);
-            List.add(body);
+            bodiesList.add(body);
             findOrbits(body,orbits);
             c.nextLine();
         }while(c.hasNextLine());
     }
+    public String toString(){
+        return bodiesList.toString();
+    }
     public static void main(String[] args)throws NoSuchFieldException, IOException {
-        List = new ArrayList<Body>();
-        readInData a = new readInData();
-        System.out.println(List);
+        SolarSystem  ss = new SolarSystem ();
+        System.out.println(ss);
     }
 }
