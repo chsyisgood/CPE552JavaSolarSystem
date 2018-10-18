@@ -18,4 +18,5 @@ For now, just read in and print out.
 
 # Comment：
 Author: Chenxiao Zhi, Siyu Chen
+
 Read in file "solarsystem.dat" and create an object called SolarSystem which has a list of all the bodies in the file. Set the attributes of each Body, including Name of the body, Mass, Diameter, What it orbits and Mean distance from what it orbits. Finally print out the list that contains all the bodies in the solar system.
